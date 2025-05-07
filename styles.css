@@ -1,0 +1,31 @@
+.card {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card.swipe-right {
+    transform: translateX(150%) rotate(30deg);
+    opacity: 0;
+}
+
+.card.swipe-left {
+    transform: translateX(-150%) rotate(-30deg);
+    opacity: 0;
+}
+
+.progress-bar {
+    transition: width 0.5s ease;
+}
+
+.photo-indicator.active {
+    background-color: #EC4899;
+}
+
+.match-popup {
+    animation: popup 0.5s ease;
+}
+
+@keyframes popup {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+}

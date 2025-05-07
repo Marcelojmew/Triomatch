@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - TripleMatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-md mx-auto min-h-screen bg-white">
+        <header class="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 flex items-center">
+            <button onclick="history.back()" class="mr-4">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="text-xl font-bold">Suporte</h1>
+        </header>
+
+        <div class="p-4 space-y-6">
+            <!-- Pesquisa -->
+            <div class="relative">
+                <input type="search" 
+                       class="w-full p-3 pl-10 bg-gray-100 rounded-lg" 
+                       placeholder="Buscar ajuda...">
+                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            </div>
+
+            <!-- Categorias -->
+            <section class="space-y-4">
+                <h2 class="text-lg font-semibold">Perguntas Frequentes</h2>
+                
+                <div class="space-y-2">
+                    <!-- Conta -->
+                    <div class="border rounded-lg overflow-hidden">
+                        <button class="w-full p-4 text-left flex justify-between items-center">
+                            <span class="font-medium">Como criar uma conta?</span>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </button>
+                        <div class="p-4 bg-gray-50 border-t">
+                            <p class="text-gray-700">
+                                Para criar uma conta no TripleMatch, basta:
+                                1. Baixar o aplicativo
+                                2. Clicar em "Criar Conta"
+                                3. Inserir seu email e telefone
+                                4. Verificar seu email
+                                5. Completar seu perfil
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="border rounded-lg overflow-hidden">
+                        <button class="w-full p-4 text-left flex justify-between items-center">
+                            <span class="font-medium">Como funciona o sistema de matches?</span>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </button>
+                        <div class="p-4 bg-gray-50 border-t">
+                            <p class="text-gray-700">
+                                O sistema de matches funciona baseado em:
+                                - Preferências mútuas
+                                - Localização
+                                - Interesses em comum
+                                - Compatibilidade de perfil
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="border rounded-lg overflow-hidden">
+                        <button class="w-full p-4 text-left flex justify-between items-center">
+                            <span class="font-medium">Como garantimos sua segurança?</span>
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </button>
+                        <div class="p-4 bg-gray-50 border-t">
+                            <p class="text-gray-700">
+                                Garantimos sua segurança através de:
+                                - Verificação de perfis
+                                - Criptografia de mensagens
+                                - Moderação de conteúdo
+                                - Sistema de denúncias
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contato -->
+            <section class="space-y-4">
+                <h2 class="text-lg font-semibold">Precisa de mais ajuda?</h2>
+                <div class="space-y-2">
+                    <a href="mailto:suporte@triplematch.com" 
+                       class="flex items-center justify-between p-4 bg-white rounded-lg shadow">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-pink-500 mr-3"></i>
+                            <span>Enviar email</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </a>
+                    <a href="#" 
+                       class="flex items-center justify-between p-4 bg-white rounded-lg shadow">
+                        <div class="flex items-center">
+                            <i class="fas fa-comment-alt text-pink-500 mr-3"></i>
+                            <span>Chat ao vivo</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - TripleMatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-md mx-auto min-h-screen bg-white">
+        <header class="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 flex items-center">
+            <button onclick="history.back()" class="mr-4">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="text-xl font-bold">Editar Perfil</h1>
+        </header>
+
+        <form class="p-4 space-y-6">
+            <!-- Fotos do Perfil -->
+            <div class="space-y-2">
+                <h2 class="text-lg font-semibold">Suas Fotos</h2>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                    <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                    <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações Básicas -->
+            <div class="space-y-4">
+                <h2 class="text-lg font-semibold">Informações Básicas</h2>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                    <input type="text" class="w-full p-2 border rounded-lg" placeholder="Seu nome">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Idade</label>
+                    <input type="number" class="w-full p-2 border rounded-lg" placeholder="Sua idade">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Bio</label>
+                    <textarea class="w-full p-2 border rounded-lg h-24" placeholder="Conte um pouco sobre você..."></textarea>
+                </div>
+            </div>
+
+            <!-- Interesses -->
+            <div class="space-y-2">
+                <h2 class="text-lg font-semibold">Interesses</h2>
+                <div class="flex flex-wrap gap-2">
+                    <button type="button" class="px-4 py-2 rounded-full bg-pink-100 text-pink-600">Viagens</button>
+                    <button type="button" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Música</button>
+                    <button type="button" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Arte</button>
+                    <button type="button" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Esportes</button>
+                    <button type="button" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Culinária</button>
+                </div>
+            </div>
+
+            <!-- Preferências -->
+            <div class="space-y-4">
+                <h2 class="text-lg font-semibold">Preferências de Casal</h2>
+                <textarea class="w-full p-2 border rounded-lg h-24" placeholder="Descreva o tipo de casal que você procura..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-pink-500 text-white py-3 rounded-lg font-medium">
+                Salvar Alterações
+            </button>
+        </form>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - TripleMatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-md mx-auto min-h-screen bg-white">
+        <header class="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 flex items-center">
+            <button onclick="history.back()" class="mr-4">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="text-xl font-bold">Configurações</h1>
+        </header>
+
+        <div class="p-4 space-y-6">
+            <!-- Conta -->
+            <section class="space-y-4">
+                <h2 class="text-lg font-semibold">Conta</h2>
+                <div class="space-y-2">
+                    <a href="#" class="flex items-center justify-between p-3 bg-white rounded-lg shadow">
+                        <span>Número de Telefone</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </a>
+                    <a href="#" class="flex items-center justify-between p-3 bg-white rounded-lg shadow">
+                        <span>Email</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </a>
+                    <a href="#" class="flex items-center justify-between p-3 bg-white rounded-lg shadow">
+                        <span>Alterar Senha</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Descoberta -->
+            <section class="space-y-4">
+                <h2 class="text-lg font-semibold">Descoberta</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Distância Máxima</label>
+                        <input type="range" class="w-full" min="1" max="100" value="50">
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>1km</span>
+                            <span>50km</span>
+                            <span>100km</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Faixa Etária</label>
+                        <div class="flex items-center space-x-4">
+                            <input type="number" class="w-20 p-2 border rounded-lg" placeholder="Min">
+                            <span>até</span>
+                            <input type="number" class="w-20 p-2 border rounded-lg" placeholder="Max">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notificações -->
+            <section class="space-y-4">
+                <h2 class="text-lg font-semibold">Notificações</h2>
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow">
+                        <span>Novos Matches</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow">
+                        <span>Mensagens</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Privacidade -->
+            <section class="space-y-4">
+                <h2 class="text-lg font-semibold">Privacidade</h2>
+                <div class="space-y-2">
+                    <a href="privacy-policy.html" class="flex items-center justify-between p-3 bg-white rounded-lg shadow">
+                        <span>Política de Privacidade</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </a>
+                    <a href="terms.html" class="flex items-center justify-between p-3 bg-white rounded-lg shadow">
+                        <span>Termos de Uso</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </a>
+                </div>
+            </section>
+
+            <button class="w-full p-3 text-red-500 font-medium">
+                Sair da Conta
+            </button>
+        </div>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - TripleMatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-md mx-auto min-h-screen bg-white">
+        <header class="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 flex items-center">
+            <button onclick="history.back()" class="mr-4">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="text-xl font-bold">Editar Perfil</h1>
+        </header>
+
+        <form class="p-4 space-y-6">
+            <!-- Fotos do Perfil -->
+            <div class="space-y-2">
+                <h2 class="text-lg font-semibold">Suas Fotos</h2>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                    <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                    <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações Básicas -->
+            <div class="space-y-4">
+                <h2 class="text-lg font-semibold">Informações Básicas</h2>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                    <input type="text" class="w-full p-2 border rounded-lg" placeholder="Seu nome">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Idade</label>
+                    <input type="number" class="w-full p-2 border rounded-lg" placeholder="Sua idade">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Bio</label>
+                    <textarea class="w-full p-2 border rounded-lg h-24" placeholder="Conte um pouco sobre você..."></textarea>
+                </div>
+            </div>
+
+            <!-- Interesses -->
+            <div class="space-y-2">
+                <h2 class="text-lg font-semibold">Interesses</h2>
+                <div class="flex flex-wrap gap-2">
+                    <button type="button" class="px-4 py-2 rounded-full bg-pink-100 text-pink-600">Viagens</button>
+                    <button type="button" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Música</button>
+                    <button type="button" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Arte</button>
+                    <button type="button" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Esportes</button>
+                    <button type="button" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Culinária</button>
+                </div>
+            </div>
+
+            <!-- Preferências -->
+            <div class="space-y-4">
+                <h2 class="text-lg font-semibold">Preferências de Casal</h2>
+                <textarea class="w-full p-2 border rounded-lg h-24" placeholder="Descreva o tipo de casal que você procura..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-pink-500 text-white py-3 rounded-lg font-medium">
+                Salvar Alterações
+            </button>
+        </form>
+    </div>
+</body>
+</html>

@@ -6,33 +6,7 @@
     <title>TripleMatch - Encontre seu match perfeito</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .card {
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-        .card.swipe-right {
-            transform: translateX(150%) rotate(30deg);
-            opacity: 0;
-        }
-        .card.swipe-left {
-            transform: translateX(-150%) rotate(-30deg);
-            opacity: 0;
-        }
-        .progress-bar {
-            transition: width 0.5s ease;
-        }
-        .photo-indicator.active {
-            background-color: #EC4899;
-        }
-        .match-popup {
-            animation: popup 0.5s ease;
-        }
-        @keyframes popup {
-            0% { transform: scale(0.8); opacity: 0; }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100 font-sans">
     <div class="max-w-md mx-auto h-screen flex flex-col overflow-hidden bg-white">
@@ -436,7 +410,6 @@
             }
         }
         
-        // ... existing code ...
         function handleTouchEnd() {
             if (!isDragging) return;
             isDragging = false;
@@ -445,12 +418,13 @@
             if (!card) return;
             
             const deltaX = moveX - startX;
+            const deltaY = moveY - startY;
             
             // Reset card position
             card.style.transform = '';
             
-            // Determine swipe direction based on threshold
-            if (Math.abs(deltaX) > 100) {
+            // Check if swipe meets threshold
+            if (Math.abs(deltaX) > 100 && Math.abs(deltaX) > Math.abs(deltaY)) {
                 if (deltaX > 0) {
                     swipeRight();
                 } else {
@@ -468,7 +442,6 @@
         
         function handleMouseMove(e) {
             if (!isDragging) return;
-            e.preventDefault();
             
             moveX = e.clientX;
             moveY = e.clientY;
@@ -479,25 +452,27 @@
             const deltaX = moveX - startX;
             const deltaY = moveY - startY;
             
+            // Only apply transform if mostly horizontal movement
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 card.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.1}deg)`;
             }
         }
         
-        function handleMouseUp(e) {
+        function handleMouseUp() {
             if (!isDragging) return;
             isDragging = false;
-            
-            const deltaX = moveX - startX;
             
             const card = document.querySelector('.card');
             if (!card) return;
             
+            const deltaX = moveX - startX;
+            const deltaY = moveY - startY;
+            
             // Reset card position
             card.style.transform = '';
             
-            // Determine swipe direction based on threshold
-            if (Math.abs(deltaX) > 100) {
+            // Check if swipe meets threshold
+            if (Math.abs(deltaX) > 100 && Math.abs(deltaX) > Math.abs(deltaY)) {
                 if (deltaX > 0) {
                     swipeRight();
                 } else {
@@ -505,10 +480,6 @@
                 }
             }
         }
-
-        // Initialize the app when the page loads
-        document.addEventListener('DOMContentLoaded', init);
-    </script>
         
         // Close match popup
         matchPopup.addEventListener('click', () => {
